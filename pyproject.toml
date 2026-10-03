@@ -1,0 +1,24 @@
+[project]
+name = "cut-and-cut"
+version = "0.1.0"
+description = "Corta um vídeo em partes de duração fixa."
+requires-python = ">=3.10"
+dependencies = [
+    "PySide6>=6.7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+cut_and_cut = ["assets/*.jpg"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
